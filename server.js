@@ -9,6 +9,7 @@ const app = express();
 
 dotenv.config({path:'config.env'});
 const PORT = process.env.PORT || 8080;
+const PASSWORD = process.env.PASSWORD || '';
 
 //log requests
 app.use(morgan('tiny'));
@@ -41,7 +42,7 @@ app.post('/',(req, res)=>{
         service: 'gmail',
         auth:{
             user: 'chinedu@geekict.com.ng',
-            pass: 'Kvu@2kd@[H;l'
+            pass: PASSWORD
         }
     })
 
